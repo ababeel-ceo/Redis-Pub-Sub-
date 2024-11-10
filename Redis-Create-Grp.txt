@@ -1,0 +1,35 @@
+------------------IMPORTANT COMMAND---------------
+XGROUP CREATE email-events email-events 0 MKSTREAM
+
+For creating the consumer group
+---------------------------------------------------
+
+------The XRANGE command retrieves a range of messages from the stream, along with their IDs. For
+XRANGE email-events - +
+-------------------------------------------------------------------------------------------------
+
+
+------------If you only want to know the number of messages in the stream, you can use XLEN:
+XLEN email-events
+--------------------------------------------------------------------------------------------
+
+XINFO: Retrieves information about the stream, including its length and the IDs of the first and last messages.
+
+XINFO STREAM stream_name
+--------------------------------------------------------------------------------------------------------
+
+-----------INFO ABOUT THE GROUP----------------------------
+XINFO GROUPS <stream-name>
+-------------------------------------------------------
+
+
+
+
+
+
+XGROUP CREATE mystream my-consumer-group 0 MKSTREAM
+
+
+
+
+XGROUP CREATE email-events my-consumer-group 0 MKSTREAM
